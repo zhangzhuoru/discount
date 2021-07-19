@@ -4,7 +4,17 @@
     
   </div>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+      }
+    },
+    methods: {
 
+    },
+  }
+</script>
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -26,4 +36,15 @@
     }
   }
 }
+// @media screen and (min-width: 500px) {
+//   #app{
+//     width: 500px;
+//     margin: 0 auto;
+//   }
+//   #app .van-tabbar{
+//     width: 500px;
+//     left: 50%;
+//     transform: translate(-50%,0);
+//   }
+// }
 </style>
