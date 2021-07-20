@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="mine">
     <div class="head_view">
       <div class="useicon">
         <div class="ubox">
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <van-cell title="我的订单" is-link value="查看全部" to="home"/>
+    <van-cell title="我的订单" is-link value="查看全部" to="list"/>
     <van-grid :column-num="5" :border="false">
       <van-grid-item v-for="value in 5" :key="value" icon="photo-o" text="文字" />
     </van-grid>
@@ -59,6 +59,9 @@
   }
 </script>
 <style lang="less" scoped>
+.mine{
+  text-align: left;
+}
 .head_view{
   padding: 18px 11px 0;
   background: #45474d;

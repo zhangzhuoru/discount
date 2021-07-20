@@ -14,7 +14,7 @@
           </div>
           <div class="fbox">
             <van-grid square :border="false">
-              <van-grid-item v-for="value in 24" :key="value" icon="photo-o" text="文字" />
+              <van-grid-item v-for="value in 24" :key="value" icon="photo-o" text="文字" to="/recharge"/>
             </van-grid>
           </div>
         </van-tab>
