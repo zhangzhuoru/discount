@@ -30,7 +30,8 @@
     </van-grid>
     <van-cell value="发现" />
     <van-grid :column-num="5" :border="false">
-      <van-grid-item v-for="value in 2" :key="value" icon="photo-o" text="文字" />
+      <van-grid-item icon="https://wx.bidian.cloud/addons/hc_recharge/template/mobile/static/icon/find_icon_4.png" text="到账查询" to="arrival"/>
+      <van-grid-item icon="https://wx.bidian.cloud/addons/hc_recharge/template/mobile/static/icon/find_icon_5.png" text="分享好友" />
     </van-grid>
     <van-tabbar v-model="active" active-color="#ee0a24" route>
       <van-tabbar-item name="home" icon="shop" replace to="/home">首页</van-tabbar-item>

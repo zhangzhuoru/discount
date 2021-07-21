@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    
+
   </div>
 </template>
 <script>
@@ -23,7 +23,10 @@
   text-align: center;
   color: #2c3e50;
 }
-
+body{
+  margin:0;padding:0;
+	height: 100%;
+}
 #nav {
   padding: 30px;
 
