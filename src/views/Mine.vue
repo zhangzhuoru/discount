@@ -26,7 +26,11 @@
 
     <van-cell title="我的订单" is-link value="查看全部" to="list"/>
     <van-grid :column-num="5" :border="false">
-      <van-grid-item v-for="value in 5" :key="value" icon="photo-o" text="文字" />
+       <van-grid-item icon="https://wx.bidian.cloud/addons/hc_recharge/template/mobile/static/icon/my_nav_1.png" text="直充订单" to="list"/>
+       <van-grid-item icon="https://wx.bidian.cloud/addons/hc_recharge/template/mobile/static/icon/my_nav_2.png" text="卡券订单" to="list"/>
+       <van-grid-item icon="https://wx.bidian.cloud/addons/hc_recharge/template/mobile/static/icon/my_nav_3.png" text="加油订单" to="list"/>
+       <van-grid-item icon="https://wx.bidian.cloud/addons/hc_recharge/template/mobile/static/icon/my_nav_4.png" text="话费订单" to="list"/>
+       <van-grid-item icon="https://wx.bidian.cloud/addons/hc_recharge/template/mobile/static/icon/my_nav_5.png" text="售后服务" to="service"/>
     </van-grid>
     <van-cell value="发现" />
     <van-grid :column-num="5" :border="false">
