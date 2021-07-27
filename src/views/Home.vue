@@ -9,7 +9,7 @@
       @click="onCancel"
     >
       <template #action>
-        <div>搜索</div>
+        <div @click="onCancel">搜索</div>
       </template>
     </van-search>
     <div class="test">
