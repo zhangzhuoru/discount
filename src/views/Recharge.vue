@@ -24,25 +24,25 @@
     <div class="network_view">
       <div class="life_title">充值规格</div>
       <div class="network_con rows">
-        <div class="network_item rows network_sel_item">滴滴出行快车券</div>
-        <div class="network_item rows ">滴滴出行快车券</div>
-        <div class="network_item rows ">滴滴出行快车券</div>
-        <div class="network_item rows ">滴滴出行快车券</div>
-        <div class="network_item rows ">滴滴出行快车券</div>
+        <div :class="paytype==1?'network_item rows network_sel_item':'network_item rows'" @click="paytype=1">滴滴出行快车券</div>
+        <div :class="paytype==2?'network_item rows network_sel_item':'network_item rows'" @click="paytype=2">滴滴出行快车券</div>
+        <div :class="paytype==3?'network_item rows network_sel_item':'network_item rows'" @click="paytype=3">滴滴出行快车券</div>
+        <div :class="paytype==4?'network_item rows network_sel_item':'network_item rows'" @click="paytype=4">滴滴出行快车券</div>
+        <div :class="paytype==5?'network_item rows network_sel_item':'network_item rows'" @click="paytype=5">滴滴出行快车券</div>
       </div>
     </div>
     <div class="spec_view">
       <div class="life_title">充值价格</div>
       <div class="spec_con rows">
-        <div class="spec_item column spec_sel_item">
+        <div :class="kpaytype==1?'spec_item column spec_sel_item':'spec_item column'" @click="kpaytype=1">
           <div class="spec_name">5元红包</div>
           <div class="scribing_price">官方价￥5.00</div>
         </div>
-        <div class="spec_item column">
+        <div :class="kpaytype==2?'spec_item column spec_sel_item':'spec_item column'" @click="kpaytype=2">
           <div class="spec_name">10元红包	</div>
           <div class="scribing_price">官方价￥10.00</div>
         </div>
-        <div class="spec_item column">
+        <div :class="kpaytype==3?'spec_item column spec_sel_item':'spec_item column'" @click="kpaytype=3">
           <div class="spec_name">20元红包</div>
           <div class="scribing_price">官方价￥20.00</div>
         </div>
@@ -84,6 +84,8 @@
       return {
         test: 1,
         tel:'',
+        paytype:1,
+        kpaytype:1
       }
     },
     methods: {

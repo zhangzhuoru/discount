@@ -18,21 +18,21 @@
       <div class="phone">
         <div class="phoneErr">请输入正确的手机号</div>
         <div class="phoneIptBox">
-          	<input class="inpt" type="number" maxlength="11" oninput = "value=value.replace(/[^\d]/g,'')"  placeholder="请输入您的手机号">
+          	<input class="inpt" type="number" :maxlength="11" v-model = "value"  placeholder="请输入您的手机号">
           	<div class="pngbox">
           		<!-- <img src="../img/pon.png" > -->
           	</div>
         </div>
         <div class="specificationsTitle">选择类型</div>
         <div class="network_con rows" v-if="cindex==1">
-          <div class="network_item rows network_sel_item">中国移动</div>
-          <div class="network_item rows">中国联通</div>
-          <div class="network_item rows">中国电信</div>
+          <div :class="paytype==1?'network_item rows network_sel_item':'network_item rows'" @click="paytype=1">中国移动</div>
+          <div :class="paytype==2?'network_item rows network_sel_item':'network_item rows'" @click="paytype=2">中国联通</div>
+          <div :class="paytype==3?'network_item rows network_sel_item':'network_item rows'" @click="paytype=3">中国电信</div>
         </div>
         <div class="network_con rows" v-if="cindex==2">
-          <div class="network_item rows network_sel_item">移动快充</div>
-          <div class="network_item rows">联通快充</div>
-          <div class="network_item rows">电信快充</div>
+          <div :class="kpaytype==1?'network_item rows network_sel_item':'network_item rows'" @click="kpaytype=1">移动快充</div>
+          <div :class="kpaytype==2?'network_item rows network_sel_item':'network_item rows'" @click="kpaytype=2">联通快充</div>
+          <div :class="kpaytype==3?'network_item rows network_sel_item':'network_item rows'" @click="kpaytype=3">电信快充</div>
         </div>
         <div class="specificationsTitle">充值规格</div>
         <div class="specificationsTab" v-if="cindex==1">
@@ -75,9 +75,18 @@
         value:'',
         navbarHeight:0,
         cindex:1,
-        active: 'live'
+        active: 'live',
+        paytype:1,
+        kpaytype:1
       }
     },
+  watch: {
+    value(newName, oldName) {
+      // ...
+      let newbox = newName.replace(/[^0-9]/g,'')
+      this.value = newbox.slice(0, 11)
+    }
+  } ,
     mounted() {
     		// console.log(document.querySelector(".page-header").offsetHeight)//获取导航条的高度
     		// this.navbarHeight = Number(document.querySelector(".page-header").offsetHeight);//吸顶的距离
