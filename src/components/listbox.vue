@@ -1,6 +1,7 @@
 <template>
   <div class="listbox">
     <h1>{{ msg }}</h1>
+    <a href="tel:4008602168">4008602168</a>
     <div class="list_view">
       <div class="list_item">
         <div class="item_top between">
